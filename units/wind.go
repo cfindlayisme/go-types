@@ -27,3 +27,11 @@ func (w WindSpeed) ToKilometersPerHour() float64 {
 func (w WindSpeed) ToMilesPerHour() float64 {
 	return w.metersPerSecond / 0.44704
 }
+
+func (w WindSpeed) Add(other WindSpeed) WindSpeed {
+	return WindSpeed{metersPerSecond: w.metersPerSecond + other.metersPerSecond}
+}
+
+func (w WindSpeed) Subtract(other WindSpeed) WindSpeed {
+	return WindSpeed{metersPerSecond: w.metersPerSecond - other.metersPerSecond}
+}
