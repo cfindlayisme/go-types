@@ -1,29 +1,29 @@
 package units
 
-type Length struct {
+type Distance struct {
 	meters float64
 }
 
-func NewLengthFromMeters(m float64) Length {
-	return Length{meters: m}
+func NewDistanceFromMeters(m float64) Distance {
+	return Distance{meters: m}
 }
 
-func NewLengthFromFeet(f float64) Length {
-	return Length{meters: f * 0.3048}
+func NewDistanceFromFeet(f float64) Distance {
+	return Distance{meters: f * 0.3048}
 }
 
-func (l Length) ToMeters() float64 {
+func (l Distance) ToMeters() float64 {
 	return l.meters
 }
 
-func (l Length) ToFeet() float64 {
+func (l Distance) ToFeet() float64 {
 	return l.meters / 0.3048
 }
 
-func (l Length) Add(other Length) Length {
-	return Length{meters: l.meters + other.meters}
+func (l Distance) Add(other Distance) Distance {
+	return Distance{meters: l.meters + other.meters}
 }
 
-func (l Length) Subtract(other Length) Length {
-	return Length{meters: l.meters - other.meters}
+func (l Distance) Subtract(other Distance) Distance {
+	return Distance{meters: l.meters - other.meters}
 }
