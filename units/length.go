@@ -19,3 +19,11 @@ func (l Length) ToMeters() float64 {
 func (l Length) ToFeet() float64 {
 	return l.meters / 0.3048
 }
+
+func (l Length) Add(other Length) Length {
+	return Length{meters: l.meters + other.meters}
+}
+
+func (l Length) Subtract(other Length) Length {
+	return Length{meters: l.meters - other.meters}
+}

@@ -27,3 +27,11 @@ func (t Temperature) ToFahrenheit() float64 {
 func (t Temperature) ToKelvin() float64 {
 	return t.celsius + 273.15
 }
+
+func (t Temperature) Add(other Temperature) Temperature {
+	return Temperature{celsius: t.celsius + other.celsius}
+}
+
+func (t Temperature) Subtract(other Temperature) Temperature {
+	return Temperature{celsius: t.celsius - other.celsius}
+}
